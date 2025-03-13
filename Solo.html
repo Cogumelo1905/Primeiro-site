@@ -1,0 +1,200 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mangas Brasil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            background-image: url(https://images7.alphacoders.com/105/thumb-1920-1054068.png);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .carrinho-usuario img {
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        .produto {
+            display: flex;
+            gap: 50px;
+            padding: 50px;
+            background-color: white;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .produto-imagens .imagem-principal {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .miniaturas {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .miniaturas img {
+            width: 50px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .miniaturas img:hover {
+            transform: scale(1.1);
+        }
+
+
+        .produto-detalhes {
+            max-width: 400px;
+        }
+
+        .preco {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantidade {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .quantidade button {
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .botao-comprar {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .botao-comprar:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"> Mangas BR </h1>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Aula%206/Cole%C3%A7%C3%B5es.html">Coleções</a></li>
+                <li><a href="file:///C:/Aula%206/contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="carrinho-usuario">
+            <a href="file:///C:/Aula%206/Carrinho.html"><img src="https://cdn-icons-png.flaticon.com/512/833/833314.png"
+                    alt="Carrinho"></a>
+            <img src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"
+                alt="Usuário">
+        </div>
+    </header>
+
+    <main>
+        <section class="produto">
+            <div class="produto-imagens">
+                <img id="imagem-principal" src="https://m.media-amazon.com/images/I/816hywlmu-L.jpg" alt="Manga solo-leveling VL 1"
+                    class="imagem-principal">
+                <div class="miniaturas">
+                    <img src="https://m.media-amazon.com/images/I/816hywlmu-L.jpg" alt="Manga 1"
+                        onclick="mudarImagem('https://m.media-amazon.com/images/I/816hywlmu-L.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/81ZAC67DE1S.jpg" alt="Manga 2"
+                        onclick="mudarImagem('https://m.media-amazon.com/images/I/81ZAC67DE1S.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/41u8PnlkgoL._AC_UF1000,1000_QL80_.jpg" alt="Manga 3"
+                        onclick="mudarImagem('https://m.media-amazon.com/images/I/41u8PnlkgoL._AC_UF1000,1000_QL80_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/81shyf5cV9L.jpg" alt="Manga 4"
+                        onclick="mudarImagem('https://m.media-amazon.com/images/I/81shyf5cV9L.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/81eln1SzG7L.jpg" alt="Manga 5"
+                        onclick="mudarImagem('https://m.media-amazon.com/images/I/81eln1SzG7L.jpg')">
+                </div>
+            </div>
+            <div class="produto-detalhes">
+                <h2>Manga Solo-Leveling VL 1 ao 5</h2> <br>
+                <p>Em um mundo onde caçadores humanos que possuem habilidades mágicas devem lutar contra monstros
+                    mortais para proteger a raça humana de certa aniquilação, um caçador notoriamente fraco chamado Sung
+                    Jinwoo se encontra em uma luta aparentemente interminável pela sobrevivência.</p> <br>
+                <div class="preco">
+                    <span class="preco-atual">R$150,00</span>
+                </div>
+                <div class="quantidade">
+                    <button class="menos">-</button>
+                    <span class="contagem">0</span>
+                    <button class="mais">+</button>
+                </div>
+                <button class="botao-comprar">🛒 Adicionar ao carrinho</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function mudarImagem(novaImagem) {
+            document.getElementById("imagem-principal").src = novaImagem;
+        }
+
+        document.querySelector('.mais').addEventListener('click', function () {
+            var contagem = document.querySelector('.contagem');
+            contagem.textContent = parseInt(contagem.textContent) + 1;
+        });
+
+        document.querySelector('.menos').addEventListener('click', function () {
+            var contagem = document.querySelector('.contagem');
+            if (parseInt(contagem.textContent) > 0) {
+                contagem.textContent = parseInt(contagem.textContent) - 1;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

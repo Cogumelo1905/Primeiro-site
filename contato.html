@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>Coleções Manga BR</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+
+        }
+
+        .intro {
+            text-align: center;
+            color: orange;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .carrinho-usuario img {
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        .produto {
+            display: flex;
+            gap: 50px;
+            padding: 50px;
+            background-color: white;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .produto-imagens .imagem-principal {
+            width: 300px;
+            border-radius: 10px;
+            margin: 34px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"> Mangas BR </h1>
+        <nav>
+            <ul>
+                <li><a href="file:///C:/Aula%206/Cole%C3%A7%C3%B5es.html">Coleções</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="carrinho-usuario">
+            <a href="file:///C:/Aula%206/Carrinho.html"><img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Carrinho"></a>
+            <img src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"
+                alt="Usuário">
+        </div>
+    </header>
+
+    <div class="intro">
+        <br>
+        <h1> Entre Em Contato </h1>
+        <h5> Prencha Os campos a baixo</h5>
+    </div>
+    <section class="produto">
+        <div class="produto-imagens">
+            <h1> formulario </h1>
+
+            <p>Nome:</p> <input type="text" name="nome" />
+            <br>
+
+            <br>
+            <p>Sobre Nome :</p> <input type="text" name="Sobrenome" /> <br>
+            <br>
+            <p> Data de Nascimento:</p> <input type=date name="DatadeNascimento" required /> <br>
+            <br>
+            <p> Telefone:</p> <input type="number" name="telefone" required /> <br>
+            <br>
+            <p> Email:</p> <input type="email" name="email" required /> <br>
+            <br> <input type="reset" id="reset" /> <input type="submit" id="enviar" />
+            <datalist id="browses">
+        </div>
+</body>
+
+</html>

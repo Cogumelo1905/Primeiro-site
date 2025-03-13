@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangas Brasil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            background-image: url(https://www.desktophut.com/images/thumb_1684136393_444810.jpg);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .carrinho-usuario img {
+            width: 30px;
+            margin-left: 10px;
+        }
+
+        .produto {
+            display: flex;
+            gap: 50px;
+            padding: 50px;
+            background-color: white;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .produto-imagens .imagem-principal {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .miniaturas {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .miniaturas img {
+            width: 50px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .miniaturas img:hover {
+            transform: scale(1.1);
+        }
+
+        .produto-detalhes {
+            max-width: 400px;
+        }
+
+        .preco {
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .desconto {
+            color: red;
+        }
+
+        .preco-antigo {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .quantidade {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .quantidade button {
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .botao-comprar {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .botao-comprar:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"> Mangas BR </h1>
+        <nav>
+            <ul>
+                <li><a href="Coleções.html">Coleções</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="carrinho-usuario">
+            <a href="Carrinho.html"><img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Carrinho"></a>
+            <img src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"
+                alt="Usuário">
+        </div>
+    </header>
+
+    <main>
+        <section class="produto">
+            <div class="produto-imagens">
+                <img id="imagem-principal" src="https://m.media-amazon.com/images/I/81Z85oL1xvL.jpg"
+                    alt="Manga Blue lock VL 1" class="imagem-principal">
+                <div class="miniaturas">
+                    <img src="https://m.media-amazon.com/images/I/81Z85oL1xvL.jpg" alt="Manga 1"
+                        onclick="mudarImagem('https://m.media-amazon.com/images/I/81Z85oL1xvL.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/613TD7Z35PL._AC_UF1000,1000_QL80_.jpg" alt="Manga 2"
+                        onclick="mudarImagem('https://m.media-amazon.com/images/I/613TD7Z35PL._AC_UF1000,1000_QL80_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/51zz1AWuhLL._AC_UF1000,1000_QL80_.jpg" alt="Manga 3"
+                        onclick="mudarImagem('https://m.media-amazon.com/images/I/51zz1AWuhLL._AC_UF1000,1000_QL80_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/61PfINazmiL._AC_UF1000,1000_QL80_.jpg" alt="Manga 4"
+                        onclick="mudarImagem('https://m.media-amazon.com/images/I/61PfINazmiL._AC_UF1000,1000_QL80_.jpg')">
+                    <img src="https://m.media-amazon.com/images/I/61psQZJE2TL._AC_UF1000,1000_QL80_.jpg" alt="Manga 5"
+                        onclick="mudarImagem('https://m.media-amazon.com/images/I/61psQZJE2TL._AC_UF1000,1000_QL80_.jpg')">
+                </div>
+            </div>
+            <div class="produto-detalhes">
+                <h2>Manga Blue Lock VL 1 ao 5</h2> <br>
+                <p>A história acompanha a jornada de Isagi Yoichi, um garoto que pretende se tornar o maior atacante do
+                    mundo e ganhar a Copa do Mundo com seu país. Capa do primeiro volume do mangá, mostrando o
+                    protagonista Isagi Yoichi. O mangá de Blue Lock já ultrapassou mais de 15 milhões de cópias em
+                    circulação.</p> <br>
+                <div class="preco">
+                    <span class="preco-atual">R$125,00</span>
+                    <span class="desconto">50%</span>
+                    <span class="preco-antigo">R$250,00</span>
+                </div>
+                <div class="quantidade">
+                    <button class="menos">-</button>
+                    <span class="contagem">0</span>
+                    <button class="mais">+</button>
+                </div>
+                <button class="botao-comprar">🛒 Adicionar ao carrinho</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function mudarImagem(novaImagem) {
+            document.getElementById("imagem-principal").src = novaImagem;
+        }
+
+
+        document.querySelector('.mais').addEventListener('click', function () {
+            var contagem = document.querySelector('.contagem');
+            contagem.textContent = parseInt(contagem.textContent) + 1;
+        });
+
+        document.querySelector('.menos').addEventListener('click', function () {
+            var contagem = document.querySelector('.contagem');
+            if (parseInt(contagem.textContent) > 0) {
+                contagem.textContent = parseInt(contagem.textContent) - 1;
+            }
+        });
+    </script>
+</body>
+
+</html>
